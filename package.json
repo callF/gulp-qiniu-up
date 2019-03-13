@@ -1,0 +1,38 @@
+{
+  "name": "gulp-qn-upload",
+  "version": "1.0.5",
+  "description": "gulp qn upload",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "scripts": {
+    "test": "cd test && ../node_modules/.bin/gulp && cd ../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durban89/gulp-qn-upload.git"
+  },
+  "keywords": [
+    "gulp",
+    "qiniu",
+    "upload"
+  ],
+  "author": "durban.zhang <durban.zhang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/durban89/gulp-qn-upload/issues"
+  },
+  "homepage": "https://github.com/durban89/gulp-qn-upload#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "merge": "^1.2.1",
+    "qn": "^1.3.0",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "xo": "^0.21.0"
+  }
+}
