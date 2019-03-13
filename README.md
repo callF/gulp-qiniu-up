@@ -13,6 +13,8 @@ Fixed a bug in the original tool gulp-qn-upload that caused a path error.
 ## 用法 Usage
 
 ```javascript
+const qn = require('gulp-qiniu-up');
+
 gulp.task('taskname', function(){
     return gulp.src('filePath')
         .pipe(qn({
@@ -23,7 +25,8 @@ gulp.task('taskname', function(){
                 origin: 'bucket-domain',
                 uploadURL: 'upload-zone-url',
             },
-            prefix: 'your prefix'
+            prefix: 'your prefix',
+            forceUpload: false
         }));
 });
 ```
