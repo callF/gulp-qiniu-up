@@ -1,38 +1,34 @@
 {
-  "name": "gulp-qiniu-up",
-  "version": "1.0.2",
+  "name": "gulp-upto-qiniu",
+  "version": "1.0.6",
   "description": "Upload files through gulp to Qiniu.",
   "main": "index.js",
   "engines": {
     "node": ">=8.9.4"
   },
+  "scripts": {
+    "test": "cd test && ../node_modules/.bin/gulp && cd ../"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/backrunner/gulp-qiniu-up.git"
+    "url": "git+https://github.com/callF/gulp-qiniu-up"
   },
   "keywords": [
     "gulp",
     "qiniu",
     "upload"
   ],
-  "author": "BackRunner <dev@backrunner.top>",
+  "author": "BackRunner,burban.zhang,qhchen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/backrunner/gulp-qiniu-up/issues"
-  },
-  "homepage": "https://github.com/backrunner/gulp-qiniu-up#readme",
   "dependencies": {
     "async": "^2.6.0",
     "gulp-util": "^3.0.8",
-    "merge": "^1.2.1",
+    "merge": "^1.2.0",
     "qn": "^1.3.0",
     "through2": "^2.0.3"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
     "xo": "^0.21.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
