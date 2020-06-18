@@ -1,6 +1,6 @@
 {
   "name": "gulp-upto-qiniu",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Upload files through gulp to Qiniu.",
   "main": "index.js",
   "engines": {
