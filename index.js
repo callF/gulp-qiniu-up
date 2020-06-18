@@ -12,7 +12,7 @@ const async = require('async');
 module.exports = function(options) {
   return through.obj(function (file, enc, callback) {
     if (file.isNull()) {
-      return callback(null, file);
+      return callback();
     }
 
     options = merge({
@@ -20,7 +20,7 @@ module.exports = function(options) {
     }, options);
 
     if (!options.qiniu) {
-      return callback(null, file);
+      return callback();
     }
 
     const qiniuConfig = options.qiniu;
@@ -28,7 +28,7 @@ module.exports = function(options) {
     const origin = qiniuConfig.domain || qiniuConfig.origin || '';
     if (!origin) {
       log('Error', colors.red(new PluginError('gulp-qn-upload', new Error('`gulp-qn-upload` package: The lost qiniu.domain argument.')).message));
-      return callback(null, file);
+      return callback();
     }
 
     const client = qn.create(options.qiniu);
@@ -39,11 +39,11 @@ module.exports = function(options) {
       stat: function(cb) {
         client.stat(fileKey, function(err, stat) {
           if (err) {
-            cb(null, true);
+            cb();
           } else {
             file.path = origin + '/' + fileKey;
             log('Skip:', colors.gray(fileName));
-            cb(null, false);
+            cb();
           }
         })
       },
@@ -53,15 +53,15 @@ module.exports = function(options) {
             key: fileKey,
           }, function (err, result) {
             if (err) {
-              cb(err);
+              cb();
             } else {
               log('Upload: ', colors.green(result.url));
               file.path = result.url;
-              cb(null, result);
+              cb();
             }
           })
         } else {
-          cb(null);
+          cb();
         }
       }]
     }, function(err) {
@@ -69,7 +69,7 @@ module.exports = function(options) {
         log('Error', colors.red(new PluginError('gulp-qn-upload', err).message));
       }
 
-      callback(null, file);
+      callback();
     })
   });
 };
