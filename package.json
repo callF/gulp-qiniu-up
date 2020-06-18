@@ -1,7 +1,7 @@
 {
-  "name": "gulp-qn-upload",
-  "version": "1.0.4",
-  "description": "gulp qn upload",
+  "name": "gulp-upto-qiniu",
+  "version": "1.0.6",
+  "description": "Upload files through gulp to Qiniu.",
   "main": "index.js",
   "engines": {
     "node": ">=8.9.4"
@@ -11,19 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/durban89/gulp-qn-upload.git"
+    "url": "git+https://github.com/callF/gulp-qiniu-up"
   },
   "keywords": [
     "gulp",
     "qiniu",
     "upload"
   ],
-  "author": "durban.zhang",
+  "author": "BackRunner,burban.zhang,qhchen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/durban89/gulp-qn-upload/issues"
-  },
-  "homepage": "https://github.com/durban89/gulp-qn-upload#readme",
   "dependencies": {
     "async": "^2.6.0",
     "gulp-util": "^3.0.8",
